@@ -1,0 +1,23 @@
+﻿.next/dev/types/validator.ts(62,39): error TS2307: Cannot find module '../../../src/app/login/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(71,39): error TS2307: Cannot find module '../../../src/app/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(80,39): error TS2307: Cannot find module '../../../src/app/profile/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(89,39): error TS2307: Cannot find module '../../../src/app/register/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(98,39): error TS2307: Cannot find module '../../../src/app/schemes/[id]/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(107,39): error TS2307: Cannot find module '../../../src/app/schemes/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(116,39): error TS2307: Cannot find module '../../../src/app/states/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(125,39): error TS2307: Cannot find module '../../../src/app/support/page.js' or its corresponding type declarations.
+.next/dev/types/validator.ts(165,39): error TS2307: Cannot find module '../../../src/app/layout.js' or its corresponding type declarations.
+.next/types/validator.ts(62,39): error TS2307: Cannot find module '../../src/app/login/page.js' or its corresponding type declarations.
+.next/types/validator.ts(71,39): error TS2307: Cannot find module '../../src/app/page.js' or its corresponding type declarations.
+.next/types/validator.ts(80,39): error TS2307: Cannot find module '../../src/app/profile/page.js' or its corresponding type declarations.
+.next/types/validator.ts(89,39): error TS2307: Cannot find module '../../src/app/register/page.js' or its corresponding type declarations.
+.next/types/validator.ts(98,39): error TS2307: Cannot find module '../../src/app/schemes/[id]/page.js' or its corresponding type declarations.
+.next/types/validator.ts(107,39): error TS2307: Cannot find module '../../src/app/schemes/page.js' or its corresponding type declarations.
+.next/types/validator.ts(116,39): error TS2307: Cannot find module '../../src/app/states/page.js' or its corresponding type declarations.
+.next/types/validator.ts(125,39): error TS2307: Cannot find module '../../src/app/support/page.js' or its corresponding type declarations.
+.next/types/validator.ts(165,39): error TS2307: Cannot find module '../../src/app/layout.js' or its corresponding type declarations.
+src/components/layout/Navbar.tsx(6,29): error TS2307: Cannot find module '@/context/LanguageContext' or its corresponding type declarations.
+src/components/layout/Navbar.tsx(11,20): error TS2552: Cannot find name 'useLocale'. Did you mean 'locale'?
+src/components/layout/Navbar.tsx(12,15): error TS2304: Cannot find name 'useTranslations'.
+src/components/layout/Navbar.tsx(13,22): error TS2552: Cannot find name 'usePathname'. Did you mean 'pathname'?
+src/components/layout/Navbar.tsx(15,36): error TS2353: Object literal may only specify known properties, and 'locale' does not exist in type 'NavigateOptions'.

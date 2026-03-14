@@ -1,0 +1,194 @@
+﻿
+> govtscheme@0.1.0 lint
+> eslint
+
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\scripts\generate-messages.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\scripts\migrate-use-language.js
+  1:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  2:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\layout.tsx
+  36:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\login\page.tsx
+  15:11  warning  't' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\profile\page.tsx
+   20:11   warning  'digiLockerStatus' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   50:11   warning  'referenceId' is assigned a value but never used       @typescript-eslint/no-unused-vars
+  104:117  error    Unexpected any. Specify a different type               @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\register\page.tsx
+  15:11  warning  't' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  66:18  warning  'err' is defined but never used         @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\states\page.tsx
+   6:19  warning  'Scheme' is defined but never used                     @typescript-eslint/no-unused-vars
+  11:11  warning  't' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  18:11  warning  'states' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  19:11  warning  'unionTerritories' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\support\page.tsx
+  11:9  warning  't' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  25:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\[locale]\support\page.tsx:25:5
+  23 |
+  24 |   useEffect(() => {
+> 25 |     setTickets(getSupportTickets());
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  26 |     setChatMessages(getSupportChatMessages());
+  27 |   }, []);
+  28 |  react-hooks/set-state-in-effect
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\api\ocr\route.ts
+  63:18  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  72:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\api\smart-parse\route.ts
+  47:18  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+  54:21  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\app\digilocker\callback\page.tsx
+  12:9  warning  't' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\EligibilityChecker.tsx
+   16:28   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+   17:34   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+   22:11   warning  't' is assigned a value but never used                                                                                @typescript-eslint/no-unused-vars
+   49:35   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+   62:63   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+   89:62   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+  120:26   warning  'e' is defined but never used                                                                                         @typescript-eslint/no-unused-vars
+  123:8    warning  React Hook useEffect has a missing dependency: 'processSmartInput'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  130:26   warning  'e' is defined but never used                                                                                         @typescript-eslint/no-unused-vars
+  180:61   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+  189:65   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+  267:70   error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                       react/no-unescaped-entities
+  267:142  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                       react/no-unescaped-entities
+  393:59   error    Unexpected any. Specify a different type                                                                              @typescript-eslint/no-explicit-any
+  469:42   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                       react/no-unescaped-entities
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\HomePageClient.tsx
+   8:101  warning  'Star' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   9:10   warning  'Card' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   9:16   warning  'CardContent' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  25:7    error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\HomePageClient.tsx:25:7
+  23 |     if (profileData) {
+  24 |       const profile = JSON.parse(profileData);
+> 25 |       setHasProfile(true);
+     |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  26 |       setUserName(profile.name || '');
+  27 |
+  28 |       const matched = initialSchemes.filter(scheme => {  react-hooks/set-state-in-effect
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\SchemeDetailClient.tsx
+    3:38  warning  'use' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+    7:10  warning  'Card' is defined but never used                                                                           @typescript-eslint/no-unused-vars
+    7:16  warning  'CardHeader' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+    7:28  warning  'CardTitle' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+    7:39  warning  'CardContent' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+    7:52  warning  'CardFooter' is defined but never used                                                                     @typescript-eslint/no-unused-vars
+   11:21  warning  'CheckCircle2' is defined but never used                                                                   @typescript-eslint/no-unused-vars
+   11:35  warning  'UploadCloud' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+   11:48  warning  'FileText' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+   11:58  warning  'ShieldCheck' is defined but never used                                                                    @typescript-eslint/no-unused-vars
+   36:8   warning  React Hook useEffect has a missing dependency: 'scheme'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  185:34  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                            react/no-unescaped-entities
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\SchemeListClient.tsx
+  27:12  warning  'profileName' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+  32:13  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\SchemeListClient.tsx:32:13
+  30 |     useEffect(() => {
+  31 |         if (categoryParam) {
+> 32 |             setActiveTab(categoryParam as SchemeCategory);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  33 |         }
+  34 |     }, [categoryParam]);
+  35 |                                                                                            react-hooks/set-state-in-effect
+  38:26  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+  41:13  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\SchemeListClient.tsx:41:13
+  39 |         if (profileData) {
+  40 |             userProfile = JSON.parse(profileData);
+> 41 |             setHasProfile(true);
+     |             ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  42 |             setProfileName(userProfile.name || '');
+  43 |             setProfileState(userProfile.state || '');
+  44 |         } else {  react-hooks/set-state-in-effect
+  50:63  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+  72:13  error    'matched' is never reassigned. Use 'const' instead                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               prefer-const
+  78:73  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+  79:83  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\chat\Chatbot.tsx
+  15:11  warning  't' is assigned a value but never used                                                                               @typescript-eslint/no-unused-vars
+  54:9   error    Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free  @typescript-eslint/ban-ts-comment
+  77:35  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+  88:40  error    Unexpected any. Specify a different type                                                                             @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\components\layout\Navbar.tsx
+   3:17  warning  'useState' is defined but never used      @typescript-eslint/no-unused-vars
+   3:27  warning  'useEffect' is defined but never used     @typescript-eslint/no-unused-vars
+  67:80  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\data\schemes-additional.ts
+  6:7  warning  'docsCaste' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\data\schemes-expanded.ts
+  34:7  warning  'docsCaste' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\data\schemes.ts
+  34:7  warning  'docsCaste' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\i18n\request.ts
+  9:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\lib\auth.ts
+  2:35  warning  'NextAuthUser' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\src\lib\db-schemes.ts
+  10:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  20:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  29:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  39:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\shake\OneDrive\Desktop\govtscheme\types\next-auth.d.ts
+  1:8  warning  'NextAuth' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 78 problems (38 errors, 40 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

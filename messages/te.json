@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "హోమ్",
+    "farmer": "రైతు పథకాలు",
+    "student": "విద్యార్థి పథకాలు",
+    "women": "మహిళా పథకాలు",
+    "business": "వ్యాపార పథకాలు",
+    "applications": "నా దరఖాస్తులు",
+    "askVoice": "వాయిస్ ద్వారా అడగండి",
+    "findSchemes": "Find Schemes",
+    "byState": "By State",
+    "support": "Support",
+    "signIn": "Sign In",
+    "profile": "Profile",
+    "govIndia": "Government of India"
+  },
+  "home": {
+    "title": "స్థానిక ప్రభుత్వ పథకం డిస్కవరీ",
+    "subtitle": "స్థానిక ప్రభుత్వ పథకం డిస్కవరీ మరియు ఆటో-అప్లికేషన్ పోర్టల్",
+    "trusted": "",
+    "searchPlaceholder": "Search for schemes, benefits, subsidies...",
+    "search": "Search",
+    "browseCategory": "Browse by Category",
+    "findRelevant": "Find schemes relevant to your needs",
+    "viewAll": "View All",
+    "schemesCount": "Schemes",
+    "newFeature": "NEW FEATURE",
+    "findByState": "Find Schemes By Your State",
+    "stateSubtitle": "Browse government schemes specifically available in your state or union territory. Get direct access to state portals and apply instantly.",
+    "exploreStates": "Explore States & UTs",
+    "states": "States",
+    "unionTerritories": "Union Territories",
+    "eligibleSchemesFor": "Eligible Schemes for",
+    "eligibleSchemes": "Eligible Schemes",
+    "eligibleCount": "You are eligible for",
+    "basedOnProfile": "schemes based on your profile",
+    "completeProfilePrompt": "Complete your profile to see schemes you are eligible for",
+    "completeProfile": "Complete Your Profile",
+    "profileHint": "Tell us your age, occupation, income, and state to see schemes you are eligible for.",
+    "fillProfile": "Fill Profile",
+    "noMatching": "No matching schemes found. Try updating your profile.",
+    "updateProfile": "Update Profile",
+    "popularSchemes": "Popular Schemes",
+    "popularSubtitle": "Most accessed government welfare programs",
+    "trackApplications": "Track your submitted applications"
+  },
+  "schemes": {
+    "title": "Find Government Schemes",
+    "searchPlaceholder": "Search by scheme name or keyword...",
+    "all": "All Schemes",
+    "filter": "Filters",
+    "clearAll": "Clear All",
+    "gender": "Gender",
+    "socialCategory": "Social Category",
+    "occupation": "Occupation",
+    "status": "Scheme Status",
+    "updateProfilePersonalized": "Update Profile for Personalized Results",
+    "found": "scheme(s) found",
+    "docsRequired": "docs required",
+    "noMatch": "No schemes found matching your criteria.",
+    "clearFilters": "Clear filters"
+  },
+  "eligible": {
+    "title": "Eligible For You",
+    "completeProfile": "Complete your profile with age, occupation, and resident area to see personalized eligible schemes.",
+    "setProfile": "Set Profile",
+    "noActive": "No active schemes matched your profile right now. Try updating age, occupation, or resident area in your profile."
+  },
+  "common": {
+    "active": "Active",
+    "upcoming": "Upcoming",
+    "expired": "Expired",
+    "all": "All"
+  },
+  "btn": {
+    "apply": "ఇప్పుడే దరఖాస్తు చేయండి",
+    "chat": "AIని అడగండి",
+    "saveContinue": "Save & Continue",
+    "cancel": "Cancel"
+  }
+}
