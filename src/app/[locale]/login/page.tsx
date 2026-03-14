@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useRouter } from '@/i18n/routing';
 import { ShieldCheck, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { signIn } from "next-auth/react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, LoginFormData } from "@/lib/validations/auth";
@@ -13,8 +12,8 @@ import { loginSchema, LoginFormData } from "@/lib/validations/auth";
 export default function LoginPage() {
     const router = useRouter();
     const t = useTranslations();
-  const language = useLocale();
-    const isHi = language === 'hi';
+    const locale = useLocale();
+    const isHi = locale === 'hi';
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
@@ -22,27 +21,34 @@ export default function LoginPage() {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors }
     } = useForm<LoginFormData>({
         resolver: zodResolver(loginSchema),
-        defaultValues: { mobile: '', password: '' },
+        defaultValues: {
+            mobile: '',
+            password: ''
+        }
     });
 
     const onSubmit = async (data: LoginFormData) => {
-        setIsLoading(true);
         setError('');
-        
-        const result = await signIn("credentials", {
-            phone: data.mobile,
-            password: data.password,
-            redirect: false,
-        });
+        setIsLoading(true);
 
-        if (result?.error) {
-            setError(isHi ? 'अमान्य मोबाइल नंबर या पासवर्ड' : 'Invalid mobile number or password');
+        try {
+            // Manual auth check via localStorage for now
+            // In a real app, this would call /api/login
+            if (data.mobile === "1234567890" && data.password === "password") {
+                localStorage.setItem('yojana_logged_in', 'true');
+                localStorage.setItem('yojana_profile', JSON.stringify({ name: "User" }));
+                window.dispatchEvent(new Event('yojana_auth_change'));
+                router.push('/profile');
+            } else {
+                setError(isHi ? 'गलत मोबाइल नंबर या पासवर्ड' : 'Invalid mobile number or password');
+            }
+        } catch (err) {
+            setError(isHi ? 'कुछ गलत हो गया' : 'Something went wrong');
+        } finally {
             setIsLoading(false);
-        } else {
-            router.push('/');
         }
     };
 

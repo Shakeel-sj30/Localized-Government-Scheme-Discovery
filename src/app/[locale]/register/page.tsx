@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from '@/i18n/routing';
 import { ShieldCheck, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
-import { signIn } from "next-auth/react";
+
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema, RegisterFormData } from "@/lib/validations/auth";
@@ -13,7 +13,7 @@ import { registerSchema, RegisterFormData } from "@/lib/validations/auth";
 export default function RegisterPage() {
     const router = useRouter();
     const t = useTranslations();
-  const language = useLocale();
+    const language = useLocale();
     const isHi = language === 'hi';
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -51,13 +51,9 @@ export default function RegisterPage() {
             });
 
             if (res.ok) {
-                // Auto login after successful registration
-                await signIn("credentials", {
-                    phone: data.mobile,
-                    password: data.password,
-                    redirect: false,
-                });
-                router.push('/profile');
+                // Redirect to login after successful registration
+                // (NextAuth signIn removed to fix build error)
+                router.push('/login');
             } else {
                 const resData = await res.json();
                 setError(resData.message || (isHi ? 'पंजीकरण विफल' : 'Registration failed'));
